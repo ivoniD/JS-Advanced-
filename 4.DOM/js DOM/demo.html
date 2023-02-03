@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivoni DOM</title>
+</head>
+
+<body>
+    <h1 id="heading">FIRST HTML</h1>
+
+    <ul>
+        <li>To Do List:
+            <ul >
+                <li class="list">Ekont</li>
+                <li class="list">Domati</li>
+                <li class="list">Mish-Mash</li>
+                <li class="list">levche-zakachalki</li>
+            </ul>
+
+        </li>
+    </ul>
+
+<a href="https://www.youtube.com/">Click for music</a>
+<button onclick="tabButton()">TAB</button>
+<button onclick="DoneList()">LIST</button>
+
+<script>
+function tabButton(){
+    let headingElement = document.getElementById('heading');
+    headingElement.textContent = 'FIRST WEB APLICATION'
+}
+function DoneList(){
+let listElements = document.getElementsByClassName('list');
+for(let i = 0; i < listElements.length; i++){
+    listElements[i].textContent = `DONE ${listElements[i].textContent}`
+}
+}
+    </script>
+<script src="demo.js"></script>
+
+
+</body>
+
+</html>
